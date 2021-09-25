@@ -16,6 +16,7 @@ import Activity1 from '../components/activity1';
 import Activity2 from '../components/activity2';
 import PreMoca from '../components/pre-moca';
 import Schedule from '../components/schedule';
+import Airdrop from '../components/airdrop';
 import { SITE_NAME, META_DESCRIPTION } from '../common/const';
 import Icon1 from '../public/images/icon_1.svg';
 import Icon2 from '../public/images/icon_2.svg';
@@ -581,7 +582,7 @@ const Home: NextPage<Props> = ({ userAgent }) => {
               <Partners />
             </div>
             <div className={classnames(styles.page, activeTab === 'block5' ? styles.show : '')}>
-              <Claim />
+              {isMobile ? <Airdrop /> : <Claim />}
             </div>
             <div className={classnames(styles.page, activeTab === 'block6' ? styles.show : '')}>
               <Schedule />
